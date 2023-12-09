@@ -1,7 +1,7 @@
 import os
 import google.generativeai as palm
 from dotenv import load_dotenv
-from tools import DOTENV_FILEPATH
+from scripts.tools import DOTENV_FILEPATH
 
 
 def PaLM(input):

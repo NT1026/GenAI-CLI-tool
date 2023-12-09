@@ -1,13 +1,13 @@
 import argparse
-from model import PaLM
-from tools import DOTENV_FILEPATH
-from tools import get_dotenv_contents
+from scripts.model import PaLM
+from scripts.tools import DOTENV_FILEPATH
+from scripts.tools import get_dotenv_contents
 
 
 if __name__ == "__main__":
 
     # Parse arguments
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description="PaLM CLI-tool is a tool programming by PaLM Python package, which can help us get response from PaLM conveniently.")
 
     run = parser.add_argument_group(title="use PaLM to generate response")
     run.add_argument("-m", "--message", help="set your input message you want to ask PaLM.")
