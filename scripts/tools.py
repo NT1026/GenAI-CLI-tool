@@ -1,4 +1,4 @@
-from scripts.configs import CONFIG_FILEPATH
+from scripts.configs import DOTENV_FILEPATH as DOTENV
 
 
 def get_dotenv_contents():
@@ -7,7 +7,7 @@ def get_dotenv_contents():
         "PALM_CONTEXT": None,
         "PALM_TEMPERATURE": None
     }
-    with open(CONFIG_FILEPATH, "r") as file:
+    with open(DOTENV, "r") as file:
         for line in file:
             line_list = line.replace("\n", "").split("=")
             results[line_list[0]] = line_list[1]

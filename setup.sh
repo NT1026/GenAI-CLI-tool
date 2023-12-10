@@ -50,16 +50,16 @@ echo "\nC. Set other configurations\n"
 sleep 1
 
 # C-1. Set scripts/configs.py
-echo "CONFIG_FILEPATH = \"$PWD/palm.conf\"" > $PWD/scripts/configs.py
+echo "DOTENV_FILEPATH = \"$PWD/.env\"" > $PWD/scripts/configs.py
 echo "${tab}C-1. Setting scripts/configs.py...Success!"
 sleep 1
 
-# C-2 Set palm.conf
+# C-2 Set .env
 echo "${tab}C-2. Setting API key created in MakerSuite (https://makersuite.google.com/app/apikey)..."
 sleep 1
 
 read -p "${tab}${tab} Please Enter you API key: " apikey
-echo "PALM_APIKEY=$apikey\nPALM_CONTEXT=None\nPALM_TEMPERATURE=None" > $PWD/palm.conf
+echo "PALM_APIKEY=$apikey\nPALM_CONTEXT=None\nPALM_TEMPERATURE=None" > $PWD/.env
 unset apikey
 echo "${tab}${tab} ...Success!\n"
 sleep 1
