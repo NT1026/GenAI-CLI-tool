@@ -1,6 +1,6 @@
 import argparse
 from scripts.model import PaLM
-from scripts.tools import DOTENV_FILEPATH
+from scripts.configs import CONFIG_FILEPATH
 from scripts.tools import get_dotenv_contents
 
 
@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     # Handling .env file
     dotenv_content = get_dotenv_contents()
-    with open(DOTENV_FILEPATH, "w") as file:
+    with open(CONFIG_FILEPATH, "w") as file:
         if args.apikey:
             dotenv_content["PALM_APIKEY"] = args.apikey
             print("Set API Key Successfully...")

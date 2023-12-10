@@ -1,2 +1,4 @@
 **/__pycache__
-.env
+palm.conf
+scripts/configs.py
+.venv
