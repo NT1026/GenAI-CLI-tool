@@ -1,6 +1,4 @@
-import os 
-
-DOTENV_FILEPATH = f"{os.getenv('PWD')}/.env"
+DOTENV_FILEPATH = f"/Users/nt1026/Documents/PaLM-CLI-tool/palm.conf"
 
 
 def get_dotenv_contents():

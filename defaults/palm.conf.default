@@ -1,0 +1,3 @@
+PALM_APIKEY=ThisIsAPIKey
+PALM_CONTEXT=This is a context emample.
+PALM_TEMPERATURE=None
