@@ -11,10 +11,11 @@ echo "\nStart Installation..."
 sleep 3
 
 
-# A. Check if Python is existed.
-echo "\nA. Check if Python is existed...\n"
+# A. Check if Python and Virtualenv is existed
+echo "\nA. Check if Python and Virtualenv is existed...\n"
 sleep 1
 
+# A-1. Check if Python is existed.
 python=`which python`
 if [ $? -ne 0 ] ; then
     python=`which python3`
@@ -24,8 +25,29 @@ if [ $? -ne 0 ] ; then
         exit
     fi
 fi
-echo "${tab}You have installed Python ($python)!"
+echo "${tab}A-1. You have installed Python ($python)!"
 sleep 1
+
+# A-2. Check if Pip is existed.
+pip=`which pip`
+if [ $? -ne 0 ] ; then
+    pip=`which pip3`
+    if  [ $? -ne 0 ] ; then
+        echo "${tab}* Installation FAILED *"
+        echo "${tab}* Please install Pip/Pip3 first *"
+        exit
+    fi
+fi
+echo "${tab}A-2. You have installed Pip ($pip)!"
+sleep 1
+
+# A-3. Check if Virtualenv is existed.
+virtualenv=`$python -m virtualenv --version`
+if [ $? -ne 0 ] ; then 
+    $pip install virtualenv > /dev/null 2>&1
+    virtualenv=`$python -m virtualenv --version`
+fi
+echo "${tab}A-3. You have installed Virtualenv ($virtualenv)!"
 
 
 # B. Create virtual envirenments of PaLM
@@ -33,7 +55,7 @@ echo "\nB. Create virtual envirenments of PaLM...\n"
 sleep 1
 
 # B-1. Create virtual envirenments
-$python -m venv .venv > /dev/null 2>&1
+$python -m virtualenv .venv > /dev/null 2>&1
 echo "${tab}B-1. Virtual envirenments (.venv) is created!"
 sleep 1
 
