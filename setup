@@ -90,8 +90,8 @@ sleep 1
 # Complete installation!
 echo -e "================================================================================================"
 echo -e "\nYou have completed the installation of PaLM CLI-tool!"
-echo -e "\nPlease use \`$PWD/.venv./bin/python3 main.py -m <your-question>\` to get a response from PaLM."
-echo -e "\nOr use \`$PWD/.venv./bin/python3 main.py -h\` to get help information."
+echo -e "\nPlease use \`$PWD/.venv/bin/python3 main.py -m <your-question>\` to get a response from PaLM."
+echo -e "\nOr use \`$PWD/.venv/bin/python3 main.py -h\` to get help information."
 echo -e "\nYou can also make an alias in your startup file (e.g. ~/.bashrc) to make it more convenient.\n"
 echo -e "\nHave fun!\n"
 echo -e "================================================================================================"
