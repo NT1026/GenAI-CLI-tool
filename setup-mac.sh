@@ -45,8 +45,8 @@ sleep 1
 virtualenv=`$python -m virtualenv --version > /dev/null 2>&1`
 if [ $? -ne 0 ] ; then 
     $pip install virtualenv > /dev/null 2>&1
-    virtualenv=`$python -m virtualenv --version`
 fi
+virtualenv=`$python -m virtualenv --version`
 echo "${tab}A-3. You have installed Virtualenv ($virtualenv)!"
 
 
