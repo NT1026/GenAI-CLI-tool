@@ -4,13 +4,19 @@ PaLM CLI-tool is a tool programming by PaLM Python package, which can help us ge
 
 ## Installation
 
-### For Mac / Linux (Ubuntu is okay)
+Before using this tool, we need to create an API key from [MakerSuite](https://makersuite.google.com/app/apikey) first.
+
+### Installation For Windows
 
 1. Check that Python3 is installed in your machine.
 2. Download PaLM CLI-tool ZIP and extract it.
-3. Open your shell, and change your working directory under PaLM CLI tool.
-4. Run `./setup`.
-5. Complete installation.
+3. Double click `setup.bat` to start installing. (Or run `setup.bat` under PaLM CLI-tool directory.)
+
+### Installation For Mac / Linux (Ubuntu is okay)
+
+1. Check that Python3 is installed in your machine.
+2. Download PaLM CLI-tool ZIP and extract it.
+3. Double click `setup` to start installing. (Or run `./setup` under PaLM CLI-tool directory.)
 
 ## Docker image
 
@@ -18,20 +24,17 @@ PaLM CLI-tool is a tool programming by PaLM Python package, which can help us ge
 
 ## Usage
 
-Before using this tool, we need to create an API key from [MakerSuite](https://makersuite.google.com/app/apikey) first.
+Activate virtual envirenment of PaLM CLI-tool first.
 
-Use `python main.py --apikey <your-apikey>` to configure your API key to PaLM CLI-tool.
+Use `python main.py -m <your-message>` to ask PaLM and get a response.
 
-Then use `python main.py -m <your-message>` to ask PaLM, and get a response.
-
-Use `python main.py -h` to get more information.
+And use `python main.py -h` to get more information.
 
 ## Tips
 
-Maybe use an alias to make it more convenient.
+Maybe use an alias to make it more convenient. For example,
 
 ```
-$ alias palm="python <path-to-this-tool>/main.py"
-
+$ alias palm="~/PaLM-CLI-tool/.venv/bin/python3 ~/PaLM-CLI-tool/main.py"
 $ palm -m "Say hello world."
 ```
