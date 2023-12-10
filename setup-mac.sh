@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 tab="    "
 
@@ -42,7 +42,7 @@ echo "${tab}A-2. You have installed Pip ($pip)!"
 sleep 1
 
 # A-3. Check if Virtualenv is existed.
-virtualenv=`$python -m virtualenv --version`
+virtualenv=`$python -m virtualenv --version > /dev/null 2>&1`
 if [ $? -ne 0 ] ; then 
     $pip install virtualenv > /dev/null 2>&1
     virtualenv=`$python -m virtualenv --version`
