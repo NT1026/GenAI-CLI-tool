@@ -2,14 +2,15 @@
 
 PaLM CLI-tool is a tool programming by PaLM Python package, which can help us get response from PaLM conveniently.
 
-## Envirenment settings
+## Installation
+
+### For Mac
 
 1. Check that Python3 is installed in your machine.
 2. Download PaLM CLI-tool ZIP and extract it.
 3. Open your shell, and change your working directory under PaLM CLI tool.
-4. (Optional) Create virtual envirenment for PaLM CLI-tool and activate it.
-5. Download necessary Python packages in requirements.txt.
-6. Complete envirenment settings.
+4. Run `sh setup.sh`.
+5. Complete installation.
 
 ## Docker image
 
