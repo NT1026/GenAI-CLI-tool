@@ -11,8 +11,8 @@ echo -e "\nStart Installation..."
 sleep 3
 
 
-# A. Check if Python and Virtualenv is existed
-echo -e "\nA. Check if Python and Virtualenv is existed...\n"
+# A. Check if Python, Pip, and Virtualenv is existed
+echo -e "\nA. Check if Python, Pip, and Virtualenv is existed...\n"
 sleep 1
 
 # A-1. Check if Python is existed.
@@ -48,6 +48,7 @@ if [ $? -ne 0 ] ; then
 fi
 virtualenv=`$python -m virtualenv --version`
 echo -e "${tab}A-3. You have installed Virtualenv ($virtualenv)!"
+sleep 1
 
 
 # B. Create virtual envirenments of PaLM
@@ -60,9 +61,7 @@ echo -e "${tab}B-1. Virtual envirenments (.venv) is created!"
 sleep 1
 
 # B-2. Download necessary python package into venv
-source $PWD/.venv/bin/activate
 $PWD/.venv/bin/pip3 install -r $PWD/requirements.txt > /dev/null 2>&1
-deactivate
 echo -e "${tab}B-2. Necessary python packages in requirements.txt are all installed."
 sleep 1
 
