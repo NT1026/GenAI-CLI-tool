@@ -9,13 +9,13 @@ Before using this tool, we need to create an API key from [MakerSuite](https://m
 ### Installation For Windows
 
 1. Check that Python3 is installed in your machine.
-2. Download PaLM CLI-tool ZIP and extract it.
+2. Download PaLM CLI-tool ZIP from GitHub and extract it.
 3. Double click `setup.bat` to start installing. (Or run `setup.bat` under PaLM CLI-tool directory.)
 
 ### Installation For Mac / Linux (Ubuntu is okay)
 
 1. Check that Python3 is installed in your machine.
-2. Download PaLM CLI-tool ZIP and extract it.
+2. Download PaLM CLI-tool ZIP from GitHub and extract it.
 3. Double click `setup` to start installing. (Or run `./setup` under PaLM CLI-tool directory.)
 
 ## Docker image
@@ -24,11 +24,15 @@ Before using this tool, we need to create an API key from [MakerSuite](https://m
 
 ## Usage
 
-Activate virtual envirenment of PaLM CLI-tool first.
+Use `<Python-in-virtual-envirenment-in-PaLM-CLI-tool> main.py -m <your-message>` to ask PaLM and get a response.
 
-Use `python main.py -m <your-message>` to ask PaLM and get a response.
+And use `<Python-in-virtual-envirenment-in-PaLM-CLI-tool> main.py -h` to get more information.
 
-And use `python main.py -h` to get more information.
+For example,
+
+```
+$ ~/PaLM-CLI-tool/.venv/bin/python3 ~/PaLM-CLI-tool/main.py -m "Hello, PaLM."
+```
 
 ## Tips
 
