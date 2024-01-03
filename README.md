@@ -24,21 +24,23 @@ Before using this tool, we need to create an API key from [MakerSuite](https://m
 
 ## Usage
 
-Use `<Python-in-virtual-envirenment-in-PaLM-CLI-tool> main.py -m <your-message>` to ask PaLM and get a response.
+Use `python main.py -m <your-message>` to ask PaLM and get a response.
 
-And use `<Python-in-virtual-envirenment-in-PaLM-CLI-tool> main.py -h` to get more information.
+And use `python main.py -h` to get more information.
 
 For example,
 
 ```
-$ ~/PaLM-CLI-tool/.venv/bin/python3 ~/PaLM-CLI-tool/main.py -m "Hello, PaLM."
+$ python main.py -m "Hello, PaLM."
 ```
 
 ## Tips
+
+Use virtual envirenment to avoid package dependency conflicting.
 
 Maybe use an alias to make it more convenient. For example,
 
 ```
 $ alias palm="~/PaLM-CLI-tool/.venv/bin/python3 ~/PaLM-CLI-tool/main.py"
-$ palm -m "Say hello world."
+$ palm -m "Hello, PaLM."
 ```
