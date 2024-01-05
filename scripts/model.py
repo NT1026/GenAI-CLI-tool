@@ -51,4 +51,4 @@ class GenAI:
                 "max_output_tokens": self.configs['GENAI_MAX_OUTPUT_TOKENS']
             }
         )
-        print(f"\n{self.configs['GENAI_NAME']}: {response.text}\n")
+        return f"{self.configs['GENAI_NAME']}: {response.text}"

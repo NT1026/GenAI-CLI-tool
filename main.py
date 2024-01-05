@@ -61,7 +61,7 @@ if __name__ == "__main__":
             if message == "!exit()":
                 break
 
-            genai.send(message)
+            print(f"\n{genai.send(message)}\n")
 
     if args.message:
-        genai.send(args.message)
+        print(genai.send(args.message))
