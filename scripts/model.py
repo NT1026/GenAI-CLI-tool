@@ -44,9 +44,8 @@ class GenAI:
         self.chat = self.model.start_chat()
     
     def send(self, input):
-        message = "(請使用繁體中文與我對話)" + input
         response = self.chat.send_message(
-            content=message,
+            content=input,
             generation_config={
                 "temperature": self.configs['GENAI_TEMPERATURE'],
                 "max_output_tokens": self.configs['GENAI_MAX_OUTPUT_TOKENS']
