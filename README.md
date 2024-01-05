@@ -30,7 +30,7 @@ Before using this tool, we need to create an API key from [MakerSuite](https://m
 
 Use `python main.py -m <your-message>` to ask Gemini and get a response.
 
-Use `python main.py -i` to enter the interactive mode.
+Use `python main.py -i` to enter the interactive mode. And use command `!exit()` to exit interactive mode.
 
 And use `python main.py -h` to get more information.
 
