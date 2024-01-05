@@ -38,6 +38,7 @@ For example,
 
 ```
 $ python main.py -m "Hello, Gemini."
+$ python main.py -m "請告訴我 Gemini 是什麼"
 ```
 
 ## Tips
