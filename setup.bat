@@ -4,7 +4,7 @@ set tab=
 
 echo:
 echo ===================================
-echo This is PaLM CLI-tool setup script.
+echo This is GenAI CLI-tool setup script.
 echo ===================================
 echo:
 timeout /t 1 >NUL
@@ -51,9 +51,9 @@ echo %tab%A-3. You have installed Virtualenv!
 timeout /t 1 >NUL
 
 
-:: B. Create virtual envirenments of PaLM
+:: B. Create virtual envirenments
 echo:
-echo B. Create virtual envirenments of PaLM...
+echo B. Create virtual envirenments...
 echo:
 timeout /t 1 >NUL
 
@@ -86,9 +86,11 @@ timeout /t 1 >NUL
 echo:
 set /p apikey= Please Enter you API key: 
 echo:
-echo PALM_APIKEY=%apikey% > .env
-echo PALM_CONTEXT=None >> .env
-echo PALM_TEMPERATURE=None >> .env
+echo GENAI_APIKEY=%apikey% > .env
+echo GENAI_MAX_OUTPUT_TOKENS=300 >> .env
+echo GENAI_MODEL=gemini-pro >> .env
+echo GENAI_NAME=Gemini >> .env
+echo GENAI_TEMPERATURE=0.75 >> .env
 echo %tab%%tab% ...Success!\n
 timeout /t 1 >NUL
 
@@ -96,13 +98,15 @@ timeout /t 1 >NUL
 :: Complete installation!
 echo ================================================================================================
 echo:
-echo You have completed the installation of PaLM CLI-tool!
+echo You have completed the installation of GenAI CLI-tool!
 echo:
-echo Please use `%cd%\.venv\Scripts\python main.py -m "your-question"` to get a response from PaLM.
+echo Please use `%cd%\.venv\Scripts\python main.py -m "your-question"` to get a response from GenAI.
 echo:
-echo Or use `%cd%\.venv\Scripts\python main.py -h` to get help information."
+echo Or use `%cd%\.venv\Scripts\python main.py -i` to use the interactive mode."
 echo:
 echo You can also make an alias in your startup file (e.g. ~/.bashrc) to make it more convenient.
+echo:
+echo Use `%cd%\.venv\bin\python3 main.py -h ` to get more information.
 echo:
 echo Have fun!
 echo:

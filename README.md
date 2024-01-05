@@ -1,6 +1,6 @@
-# PaLM CLI-tool
+# GenAI CLI-tool
 
-PaLM CLI-tool is a tool programming by PaLM Python package, which can help us get response from PaLM conveniently.
+GenAI CLI-tool is a tool programming by Gemini Python API, which can help us get response from Gemini conveniently.
 
 ## Installation
 
@@ -9,29 +9,35 @@ Before using this tool, we need to create an API key from [MakerSuite](https://m
 ### Installation For Windows
 
 1. Check that Python3 is installed in your machine.
-2. Download PaLM CLI-tool ZIP from GitHub and extract it.
-3. Double click `setup.bat` to start installing. (Or run `setup.bat` under PaLM CLI-tool directory.)
+2. Download GenAI CLI-tool ZIP from GitHub and extract it.
+3. Double click `setup.bat` to start installing. (Or run `setup.bat` under GenAI CLI-tool directory.)
 
 ### Installation For Mac / Linux (Ubuntu is okay)
 
 1. Check that Python3 is installed in your machine.
-2. Download PaLM CLI-tool ZIP from GitHub and extract it.
-3. Double click `setup` to start installing. (Or run `./setup` under PaLM CLI-tool directory.)
+2. Download GenAI CLI-tool ZIP from GitHub and extract it.
+3. Double click `setup` to start installing. (Or run `./setup` under GenAI CLI-tool directory.)
 
 ## Docker image
 
 (TODO)
 
+## Discord bot
+
+(TODO)
+
 ## Usage
 
-Use `python main.py -m <your-message>` to ask PaLM and get a response.
+Use `python main.py -m <your-message>` to ask Gemini and get a response.
+
+Use `python main.py -i` to enter the interactive mode.
 
 And use `python main.py -h` to get more information.
 
 For example,
 
 ```
-$ python main.py -m "Hello, PaLM."
+$ python main.py -m "Hello, Gemini."
 ```
 
 ## Tips
@@ -41,6 +47,6 @@ Use virtual envirenment to avoid package dependency conflicting.
 Maybe use an alias to make it more convenient. For example,
 
 ```
-$ alias palm="~/PaLM-CLI-tool/.venv/bin/python3 ~/PaLM-CLI-tool/main.py"
-$ palm -m "Hello, PaLM."
+$ alias gemini="~/GenAI-CLI-tool/.venv/bin/python3 ~/GenAI-CLI-tool/main.py"
+$ gemini -m "Hello, Gemini."
 ```

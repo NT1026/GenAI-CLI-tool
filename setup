@@ -3,7 +3,7 @@
 tab="    "
 
 echo -e "\n==================================="
-echo -e "This is PaLM CLI-tool setup script."
+echo -e "This is GenAI CLI-tool setup script."
 echo -e "==================================="
 sleep 1
 
@@ -51,8 +51,8 @@ echo -e "${tab}A-3. You have installed Virtualenv ($virtualenv)!"
 sleep 1
 
 
-# B. Create virtual envirenments of PaLM
-echo -e "\nB. Create virtual envirenments of PaLM...\n"
+# B. Create virtual envirenments
+echo -e "\nB. Create virtual envirenments...\n"
 sleep 1
 
 # B-1. Create virtual envirenments
@@ -80,7 +80,7 @@ echo -e "${tab}C-2. Setting API key created in MakerSuite (https://makersuite.go
 sleep 1
 
 read -p "${tab}${tab} Please Enter you API key: " apikey
-echo -e "PALM_APIKEY=$apikey\nPALM_CONTEXT=None\nPALM_TEMPERATURE=None" > $PWD/.env
+echo -e "GENAI_APIKEY=$apikey\nGENAI_MAX_OUTPUT_TOKENS=300\nGENAI_MODEL=gemini-pro\nGENAI_NAME=Gemini\nGENAI_TEMPERATURE=0.75" > $PWD/.env
 unset apikey
 echo -e "${tab}${tab} ...Success!\n"
 sleep 1
@@ -88,9 +88,10 @@ sleep 1
 
 # Complete installation!
 echo -e "================================================================================================"
-echo -e "\nYou have completed the installation of PaLM CLI-tool!"
-echo -e "\nPlease use \`$PWD/.venv/bin/python3 main.py -m <your-question>\` to get a response from PaLM."
-echo -e "\nOr use \`$PWD/.venv/bin/python3 main.py -h\` to get help information."
+echo -e "\nYou have completed the installation of GenAI CLI-tool!"
+echo -e "\nPlease use \`$PWD/.venv/bin/python3 main.py -m <your-question>\` to get a response from GenAI."
+echo -e "\nOr use \`$PWD/.venv/bin/python3 main.py -i\` to use the interactive mode."
 echo -e "\nYou can also make an alias in your startup file (e.g. ~/.bashrc) to make it more convenient.\n"
+echo -e "\nUse \`$PWD/.venv/bin/python3 main.py -h \` to get more information.\n"
 echo -e "\nHave fun!\n"
 echo -e "================================================================================================"
