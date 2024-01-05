@@ -51,3 +51,9 @@ Maybe use an alias to make it more convenient. For example,
 $ alias gemini="~/GenAI-CLI-tool/.venv/bin/python3 ~/GenAI-CLI-tool/main.py"
 $ gemini -m "Hello, Gemini."
 ```
+
+## Release
+
+2023-12-11: v1       -- PaLM-CLI-tool (You can find it at branch `GenAI-CLI-tool-v1`)
+
+2024-01-05: v2.0.0 -- Since Google GenAI API update, rename PaLM-CLI-tool to GenAI-CLI-tool.
