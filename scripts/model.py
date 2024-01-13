@@ -3,13 +3,18 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 from scripts.configs import DOTENV_FILEPATH as DOTENV
 
+configs_message = {
+    "GENAI_APIKEY": "API Key",
+    "GENAI_MAX_OUTPUT_TOKENS": "Max-Output-Tokens",
+    "GENAI_NAME": "Nickname",
+    "GENAI_TEMPERATURE": "Temperature"
+}
 
 class GenAI:
     def __init__(self):
         load_dotenv(DOTENV)
         self.configs = {
             "GENAI_APIKEY": os.getenv("GENAI_APIKEY"),
-            # "GENAI_CONTEXT": os.getenv("GENAI_CONTEXT"),
             "GENAI_MAX_OUTPUT_TOKENS": int(os.getenv("GENAI_MAX_OUTPUT_TOKENS")),
             "GENAI_MODEL": "gemini-pro",
             "GENAI_NAME": os.getenv("GENAI_NAME"),
@@ -18,12 +23,11 @@ class GenAI:
 
     def set_configs(self, key, value):
         self.configs[key] = value
-        print(f"Set {key} Successfully...")
+        print(f"Set {configs_message[key]} Successfully...")
 
     def get_configs(self):
         print(f"---")
         print(f"GENAI_APIKEY = {self.configs['GENAI_APIKEY']}")
-        # print(f"GENAI_CONTEXT = {self.configs['GENAI_CONTEXT']}")
         print(f"GENAI_MAX_OUTPUT_TOKENS = {self.configs['GENAI_MAX_OUTPUT_TOKENS']}")
         print(f"GENAI_MODEL = {self.configs['GENAI_MODEL']}")
         print(f"GENAI_NAME = {self.configs['GENAI_NAME']}")
@@ -33,7 +37,6 @@ class GenAI:
     def save_configs(self):
         with open(DOTENV, "w") as file:
             file.write(f"GENAI_APIKEY={self.configs['GENAI_APIKEY']}\n")
-            # file.write(f"GENAI_CONTEXT={self.configs['GENAI_CONTEXT']}\n")
             file.write(f"GENAI_MAX_OUTPUT_TOKENS={self.configs['GENAI_MAX_OUTPUT_TOKENS']}\n")
             file.write(f"GENAI_MODEL={self.configs['GENAI_MODEL']}\n")
             file.write(f"GENAI_NAME={self.configs['GENAI_NAME']}\n")
@@ -53,3 +56,7 @@ class GenAI:
             }
         )
         return f"{self.configs['GENAI_NAME']}: {response.text}"
+
+    def history(self):
+        return self.chat.history
+    
