@@ -16,7 +16,6 @@ if __name__ == "__main__":
     configs = parser.add_argument_group(title="configurations")
     configs.add_argument("-s", "--show", help="show your configurations.", action="store_true")
     configs.add_argument("-a", "--apikey", help="set your API key created in MakerSuite.")
-    configs.add_argument("-c", "--context", help="set the context of LLM. These context will be provided to the model first, to ground the response.")
     configs.add_argument("-o", "--maxOutputTokens", help="set the max output tokens of the response.")
     configs.add_argument("-n", "--name", help="customize the nickname of LLM.")
     configs.add_argument("-t", "--temperature", help="set the temperature of LLM. The value is in [0.0, 1.0]. Higher values produce a more random and varied response.")
