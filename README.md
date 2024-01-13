@@ -30,16 +30,18 @@ Before using this tool, we need to create an API key from [MakerSuite](https://m
 
 Use `python main.py -m <your-message>` to ask Gemini and get a response.
 
-Use `python main.py -i` to enter the interactive mode. And use command `!exit()` to exit interactive mode.
-
-And use `python main.py -h` to get more information.
-
 For example,
 
 ```
 $ python main.py -m "Hello, Gemini."
 $ python main.py -m "請告訴我 Gemini 是什麼"
 ```
+
+Use `python main.py -i` to enter the interactive mode. 
+
+You can use command `!exit()` to exit interactive mode, or `!history()` to check your chat history in this session.
+
+Use `python main.py -h` to get more information.
 
 ## Tips
 
@@ -57,3 +59,5 @@ $ gemini -m "Hello, Gemini."
 2023-12-11: v1       -- PaLM-CLI-tool (You can find it at branch `GenAI-CLI-tool-v1`)
 
 2024-01-05: v2.0.0 -- Since Google GenAI API update, rename PaLM-CLI-tool to GenAI-CLI-tool.
+
+2024-01-13: v2.0.1 -- Interactive mode can view chat history now.
