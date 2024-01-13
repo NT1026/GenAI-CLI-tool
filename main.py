@@ -30,23 +30,18 @@ if __name__ == "__main__":
         
     if args.apikey:
         genai.set_configs(key="GENAI_APIKEY", value=args.apikey)
-        print("Set API Key Successfully...")
 
     # if args.context:
     #     dotenv_content["PALM_CONTEXT"] = args.context
-    #     print("Set Context Successfully...")
     
     if args.maxOutputTokens:
         genai.set_configs(key="GENAI_MAX_OUTPUT_TOKENS", value=args.maxOutputTokens)
-        print("Set Max-Output-Tokens Successfully...")
 
     if args.name:
         genai.set_configs(key="GENAI_NAME", value=args.name)
-        print("Set Name Successfully...")
 
     if args.temperature:
         genai.set_configs(key="GENAI_TEMPERATURE", value=args.temperature)
-        print("Set Tempurature Successfully...")
 
 
     # Initial GenAI

@@ -18,6 +18,7 @@ class GenAI:
 
     def set_configs(self, key, value):
         self.configs[key] = value
+        print(f"Set {key} Successfully...")
 
     def get_configs(self):
         print(f"---")
